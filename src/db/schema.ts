@@ -10,7 +10,7 @@ export const chatsTable = pgTable("chats", {
 export const messagesTable = pgTable("messages", {
     id: serial("id").primaryKey(),
     chatId: integer("chat_id").references(() => chatsTable.id),
-    role: text("role").notNull(),
+    role: text("role ").notNull(),
     content: text("content").notNull()
 })
 
